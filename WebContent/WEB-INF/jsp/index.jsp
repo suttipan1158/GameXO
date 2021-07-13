@@ -100,6 +100,13 @@ function myFunction(i,j) {
 				if(document.getElementById("square"+random01+random02).value == ""){
 					document.getElementById("square"+random01+random02).value = "o";
 					document.getElementById("square"+random01+random02).disabled = true;
+				}else{
+					random01 = Math.floor(Math.random() * 3);
+					random02 = Math.floor(Math.random() * 3);
+					if(document.getElementById("square"+random01+random02).value == ""){
+						document.getElementById("square"+random01+random02).value = "o";
+						document.getElementById("square"+random01+random02).disabled = true;
+					}
 				}
 			}
 	
@@ -210,7 +217,22 @@ function myFunctionFour(i,j) {
 			if(document.getElementById("four"+random01+random02).value == ""){
 				document.getElementById("four"+random01+random02).value = "o";
 				document.getElementById("four"+random01+random02).disabled = true;
+			}else{
+				random01 = Math.floor(Math.random() * 3);
+				random02 = Math.floor(Math.random() * 3);
+				if(document.getElementById("four"+random01+random02).value == ""){
+					document.getElementById("four"+random01+random02).value = "o";
+					document.getElementById("four"+random01+random02).disabled = true;
+				}else{
+					random01 = Math.floor(Math.random() * 3);
+					random02 = Math.floor(Math.random() * 3);
+					if(document.getElementById("four"+random01+random02).value == ""){
+						document.getElementById("four"+random01+random02).value = "o";
+						document.getElementById("four"+random01+random02).disabled = true;
+					}
+				}
 			}
+			
 		}
 	
 	console.log("four"+i+j);
@@ -247,20 +269,27 @@ function myFunctionFour(i,j) {
 			}else if(box00 == "x" && box11 == "x" && box22 == "x" && box33 == "x"){
 				tests = 'คุณชนะแล้ว 00 ,11 ,22,33';
 				win = 1;
-			}else if(box02 == "x" && box12 == "x" && box22 == "x"  && box33 == "x"){
-				tests = 'คุณชนะแล้ว 02 ,12 ,22,33';
+			}else if(box02 == "x" && box12 == "x" && box22 == "x"  && box32 == "x"){
+				tests = 'คุณชนะแล้ว 02 ,12 ,22,32';
 				win = 1;
-			}else if(box02 == "x" && box11 == "x" && box20 == "x" && box30 == "x"){
+			}else if(box03 == "x" && box12 == "x" && box21 == "x" && box30 == "x"){
 				tests = 'คุณชนะแล้ว 02 ,11 ,20,30';
 				win = 1;
-			}else if(box20 == "x" && box21 == "x" && box22 == "x" && box33 == "x"){
-				tests = 'คุณชนะแล้ว 20 ,21 ,22,33';
+			}else if(box20 == "x" && box21 == "x" && box22 == "x" && box23 == "x"){
+				tests = 'คุณชนะแล้ว 20 ,21 ,22,23';
 				win = 1;
 			}else if(box01 == "x" && box11 == "x" && box21 == "x" && box31 == "x"){
 				tests = 'คุณชนะแล้ว 01 ,11 ,21,31';
 				win = 1;
 			}else if(box10 == "x" && box11 == "x" && box12 == "x"&& box13 == "x"){
 				tests = 'คุณชนะแล้ว 10 ,11 ,12,13';
+				win = 1;
+			}else if(box03 == "x" && box13 == "x" && box23 == "x"&& box33 == "x"){
+				tests = 'คุณชนะแล้ว 03 ,13 ,23,33';
+				win = 1;
+			}
+			else if(box30 == "x" && box31 == "x" && box32 == "x"&& box33 == "x"){
+				tests = 'คุณชนะแล้ว 30 ,31 ,32,33';
 				win = 1;
 			}
 			
@@ -273,10 +302,10 @@ function myFunctionFour(i,j) {
 			}else if(box00 == "o" && box11 == "o" && box22 == "o"  && box33 == "o"){
 				tests = 'Bot ชนะแล้ว 00 ,11 ,22,33';
 				win = 1;
-			}else if(box02 == "o" && box12 == "o" && box22 == "o"  && box33 == "o"){
-				tests = 'Bot ชนะแล้ว 02 ,12 ,22,33';
+			}else if(box02 == "o" && box12 == "o" && box22 == "o"  && box32 == "o"){
+				tests = 'Bot ชนะแล้ว 02 ,12 ,22,32';
 				win = 1;
-			}else if(box02 == "o" && box11 == "o" && box20 == "o" && box30 == "o"){
+			}else if(box03 == "o" && box12 == "o" && box21 == "o" && box30 == "o"){
 				tests = 'Bot ชนะแล้ว 02 ,11 ,20,30';
 				win = 1;
 			}else if(box20 == "o" && box21 == "o" && box22 == "o" && box33 == "o"){
@@ -287,6 +316,13 @@ function myFunctionFour(i,j) {
 				win = 1;
 			}else if(box10 == "o" && box11 == "o" && box12 == "o" && box13 == "o"){
 				tests = 'Bot ชนะแล้ว 10 ,11 ,12,13';
+				win = 1;
+			}else if(box03 == "x" && box13 == "x" && box23 == "x"&& box33 == "x"){
+				tests = 'คุณชนะแล้ว 03 ,13 ,23,33';
+				win = 1;
+			}
+			else if(box30 == "x" && box31 == "x" && box32 == "x"&& box33 == "x"){
+				tests = 'คุณชนะแล้ว 30 ,31 ,32,33';
 				win = 1;
 			}
 		
