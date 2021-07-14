@@ -15,4 +15,5 @@
 		 	<property name="suffix" value=".jsp"/>
 		 </bean>
 		<mvc:resources location="/WEB-INF/imgs/" mapping="/img/**" cache-period="10000"></mvc:resources>
+			<mvc:resources location="/WEB-INF/js/" mapping="/js/**"></mvc:resources>
 </beans>
